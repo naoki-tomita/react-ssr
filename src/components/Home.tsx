@@ -1,13 +1,10 @@
 import React, { FC } from "react";
 
-export const Home: FC = () => {
-  function onClick() {
-    console.log("clicked")
-  }
+export const Home: FC<{ text: string }> = ({ text }) => {
   return (
     <>
-    <div>This is home</div>
-    <button onClick={onClick}>click!</button>
+    <div>{text}</div>
+    <button onClick={() => console.log("clicked.")}>click!</button>
     </>
   );
 }
